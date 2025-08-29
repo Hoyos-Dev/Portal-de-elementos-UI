@@ -1,0 +1,36 @@
+<div class="ui-general-container">
+  <h1 class="titulo-todos">Tarjeta + Imagen</h1>
+  <p class="descripcion-todos">
+    Descripción breve o información adicional relacionada con el contenido principal de la tarjeta.
+  </p>
+  <div class="volver-container">
+    <span class="volver-text" (click)="volver()">
+      <mat-icon class="flecha-atras">arrow_back</mat-icon>
+      Volver
+    </span>
+  </div>
+  <div class="card-card">
+    <div class="preview">
+      <div class="card-demo-visual">
+        <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=400&q=80"
+          alt="Ejemplo" class="card-demo-img">
+        <div class="card-demo-content">
+          <div class="card-demo-title">Titulo</div>
+          <div class="card-demo-sub">
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+            Rem asperiores eligendi possimus, harum voluptatem maiores nisi
+          </div>
+          <button class="card-demo-btn">
+            Continuar <mat-icon class="icon-md">arrow_forward</mat-icon>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <ng-container *ngIf="tabs.length > 0; else loading">
+    <app-view-sintaxis [tabs]="tabs"></app-view-sintaxis>
+  </ng-container>
+  <ng-template #loading>
+    <app-loader-shared></app-loader-shared>
+  </ng-template>
+</div>

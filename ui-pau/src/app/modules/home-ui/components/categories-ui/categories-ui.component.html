@@ -1,0 +1,55 @@
+<div class="categories-card">
+  <h2>Categorías</h2>
+  <p>Navegación por elementos</p>
+  <hr class="hr-style">
+  <div class="category-list">
+    <button class="btn-primary" [ngClass]="{'categoria-activa': isActive('')}" (click)="irAAll()">
+      <mat-icon>apps</mat-icon>
+      All
+    </button>
+    <button class="btn-primary" [ngClass]="{'categoria-activa': isActive('botones')}" (click)="irABotones()">
+      <mat-icon>touch_app</mat-icon>
+      Botones
+    </button>
+    <button class="btn-primary" [ngClass]="{'categoria-activa': isActive('colores')}" (click)="irAColores()">
+      <mat-icon>palette</mat-icon>
+      Colores
+    </button>
+    <button class="btn-primary" [ngClass]="{'categoria-activa': isActive('alertas')}" (click)="irAAlertas()">
+      <mat-icon>notifications</mat-icon>
+      Alertas
+    </button>
+    <button class="btn-primary" [ngClass]="{'categoria-activa': isActive('tablas')}" (click)="irATablas()">
+      <mat-icon>table_chart</mat-icon>
+      Tablas
+    </button>
+    <button class="btn-primary" [ngClass]="{'categoria-activa': isActive('inputs')}" (click)="irAInputs()">
+      <mat-icon>keyboard</mat-icon>
+      Inputs
+    </button>
+    <button class="btn-primary" [ngClass]="{'categoria-activa': isActive('icons')}" (click)="irAIcons()">
+      <mat-icon>add_reaction</mat-icon>
+      Iconos
+    </button>
+    <button class="btn-primary" [ngClass]="{'categoria-activa': isActive('loader')}" (click)="irALoader()">
+      <mat-icon>category_search</mat-icon>
+      Loader
+    </button>
+    <button class="btn-primary" [ngClass]="{'categoria-activa': isActive('cards')}" (click)="irACards()">
+      <mat-icon>dashboard</mat-icon>
+      Tarjetas
+    </button>
+    <button class="btn-primary" [ngClass]="{'categoria-activa': isActive('typography')}" (click)="irATypography()">
+      <mat-icon>text_fields</mat-icon>
+      Tipografía
+    </button>
+    <button class="btn-primary" [ngClass]="{'categoria-activa': isActive('images')}" (click)="irAImages()">
+      <mat-icon>image</mat-icon>
+      Imágenes
+    </button>
+    <button class="btn-primary" [ngClass]="{'categoria-activa': isActive('extras')}" (click)="irAExtras()">
+      <mat-icon>extension </mat-icon>
+      Extras
+    </button>
+  </div>
+</div>

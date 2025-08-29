@@ -1,0 +1,233 @@
+.ui-general-container {
+    padding-top: 0;
+  }
+  
+  .titulo-todos {
+    margin-top: 0;
+    font-size: 25px;
+    font-weight: 700;
+    margin-bottom: 0;
+  }
+  
+  .descripcion-todos {
+    color: #4a5568;
+    font-size: 15px;
+    font-weight: 300;
+    margin-top: 0;
+    margin-bottom: 27px;
+  }
+
+//Colores - PAU
+.ejemplo-color {
+    display: flex;
+    gap: 24px;
+    margin-top: 25px;
+    flex-wrap: wrap;
+  }
+  
+  
+  .card-color {
+    background: #fff;
+    border: 1px solid #e2e8f0;
+    border-radius: 12px;
+    padding: 24px 18px 18px 18px;
+    min-width: 200px;
+    max-width: 320px;
+    flex: 1 1 200px;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    box-shadow: 0 1.1px 2.2px rgba(0,0,0,0.05);
+  
+    h2 {
+      font-size: 25px;
+      font-weight: 700;
+      margin: 0 0 4px 0;  
+    }
+  
+    p {
+      color: #4a5568;
+      font-size: 15px;
+      font-weight: 300;
+      margin: 0 0 16px 0;
+    }
+  
+    .preview {
+      background: #fafbfc;
+      border: 1px solid #e2e8f0;
+      border-radius: 8px;
+      padding: 3px 0;
+      margin-bottom: 18px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 80px;
+    }
+  
+    .ver-codigo {
+      margin-top: auto;
+      width: 100%;
+      font-size: 1rem;
+      font-weight: 500;
+    }
+  }
+  
+  .cuadro-azul-primario {
+    width: 60px;
+    height: 60px;
+    background: #003594;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.10);
+    margin: 0;
+    display: flex;
+  }
+  
+  .cuadro-azul-secundario {
+    width: 60px;
+    height: 60px;
+    background: #0047B3;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.10);
+    margin: 0;
+    display: flex;
+  }
+  
+  .cuadro-azul-secundario {
+    width: 60px;
+    height: 60px;
+    background: #0047B3;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.10);
+    margin: 0;
+    display: flex;
+  }
+  
+  .cuadro-amarillo{
+    width: 60px;
+    height: 60px;
+    background: #FECA0A;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.10);
+    margin: 0;
+    display: flex;
+  }
+  
+  .cuadro-gris-op1{
+    width: 60px;
+    height: 60px;
+    background: #EBEBEB;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.219);
+    margin: 0;
+    display: flex;
+  }
+  
+  .cuadro-gris-op2{
+    width: 60px;
+    height: 60px;
+    background: #475569;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.219);
+    margin: 0;
+    display: flex;
+  }
+  
+  .cuadro-gris-op3{
+    width: 60px;
+    height: 60px;
+    background: #535353;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.219);
+    margin: 0;
+    display: flex;
+  }
+  
+  .cuadro-negro{
+    width: 60px;
+    height: 60px;
+    background: #0F172A;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.219);
+    margin: 0;
+    display: flex;
+  }
+  
+  .cuadro-verde{
+    width: 60px;
+    height: 60px;
+    background: #0ED422;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.219);
+    margin: 0;
+    display: flex;
+  }
+  
+  .cuadro-rojo{
+    width: 60px;
+    height: 60px;
+    background: #E91D24;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.219);
+    margin: 0;
+    display: flex;
+  }
+  
+  .cuadro-naranja{
+    width: 60px;
+    height: 60px;
+    background: #FF9D00;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.219);
+    margin: 0;
+    display: flex;
+  }
+
+  .cuadro-azul-claro {
+    width: 60px;
+    height: 60px;
+    background: #e6f1fd;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.10);
+    margin: 0;
+    display: flex;
+  }
+  
+  .cuadro-verde-claro {
+    width: 60px;
+    height: 60px;
+    background: #effce0;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.10);
+    margin: 0;
+    display: flex;
+  }
+  
+  .cuadro-rojo-claro {
+    width: 60px;
+    height: 60px;
+    background: #ffe0e0;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.10);
+    margin: 0;
+    display: flex;
+  }
+  
+  .cuadro-naranja-claro {
+    width: 60px;
+    height: 60px;
+    background: #fff3e0;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.10);
+    margin: 0;
+    display: flex;
+  }
+
+  .cuadro-amarillo-claro{
+    width: 60px;
+    height: 60px;
+    background: #FFFFB7;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.10);
+    margin: 0;
+    display: flex;
+  }

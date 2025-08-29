@@ -1,0 +1,29 @@
+<app-header-categories *ngIf="mostrarHeader" [titulo]="'Loader'"
+  [descripcion]="'Animaciones y barras de carga para indicar procesos en curso y mejorar la experiencia del usuario durante la espera.'"></app-header-categories>
+<div class="ui-general-container">
+  <div class="ejemplo-icons-loader">
+    <div class="card-loader">
+      <h2>Animación de carga</h2>
+      <p>Indicador visual animado que muestra que una acción o proceso está en progreso.</p>
+      <div class="preview">
+        <div class="loader-overlay" [class.hidden]="isHidden">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 384" class="loader">
+            <circle r="176" cy="192" cx="192" stroke-width="40" fill="transparent" pathLength="360" class="active">
+            </circle>
+            <circle r="176" cy="192" cx="192" stroke-width="40" fill="transparent" pathLength="360" class="track">
+            </circle>
+          </svg>
+        </div>
+      </div>
+      <button class="btn-primary ver-codigo" (click)="verCodigoLoader()">Ver código</button>
+    </div>
+    <div class="card-loader">
+      <h2>Barra de carga</h2>
+      <p>Barra progresiva que representa el avance de una tarea o carga de información.</p>
+      <div class="preview">
+        <mat-progress-bar mode="determinate" [value]="progressValue"></mat-progress-bar>
+      </div>
+      <button class="btn-primary ver-codigo" (click)="verCodigoLoadingBar()">Ver código</button>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,13 @@
+<!-- Orchestrator - Controlador principal de la interfaz -->
+<app-head-ui *ngIf="showHeadUi"></app-head-ui>
+<div class="orchestrator-container">
+  <!-- Panel lateral de categorías -->
+  <div class="side-panel">
+    <app-categories-ui *ngIf="showCategoriesUi"></app-categories-ui>
+  </div>
+  <!-- Panel principal (espacio en blanco a la derecha) -->
+  <div class="main-panel">
+    <!-- Aquí se mostrará el contenido principal según la categoría seleccionada -->
+    <router-outlet></router-outlet>
+  </div>
+</div>

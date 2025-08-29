@@ -1,0 +1,98 @@
+<app-header-categories *ngIf="mostrarHeader" [titulo]="'Tablas'"
+  [descripcion]="'Componentes de tabla para mostrar y organizar datos de forma clara, ordenada y personalizable.'"></app-header-categories>
+
+<div class="ui-general-container">
+  <div class="ejemplo-tabla">
+    <div class="card-tabla">
+      <h2>Tabla</h2>
+      <p>Ejemplo de tabla responsiva con filas, columnas y acciones. Ideal para visualizar grandes volúmenes de
+        información de manera estructurada.</p>
+      <div class="preview">
+        <div class="tabla-ejemplo-wrapper">
+          <table mat-table [dataSource]="dataSource" class="custom-mat-table">
+            <!-- Nombre Column -->
+            <ng-container matColumnDef="nombre">
+              <th mat-header-cell *matHeaderCellDef> Nombre </th>
+              <td mat-cell *matCellDef="let element"> {{element.nombre}} </td>
+            </ng-container>
+            <!-- Descripcion Column -->
+            <ng-container matColumnDef="descripcion">
+              <th mat-header-cell *matHeaderCellDef> Descripcion </th>
+              <td mat-cell *matCellDef="let element"> {{element.descripcion}} </td>
+            </ng-container>
+            <!-- Estado Column -->
+            <ng-container matColumnDef="estado">
+              <th mat-header-cell *matHeaderCellDef> Estado </th>
+              <td mat-cell *matCellDef="let element"> {{element.estado}} </td>
+            </ng-container>
+            <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+            <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+          </table>
+          <mat-paginator [length]="20" [pageSize]="5" [pageSizeOptions]="[5]" showFirstLastButtons></mat-paginator>
+        </div>
+      </div>
+      <button class="btn-primary ver-codigo" (click)="verCodigoTabla()">Ver código</button>
+    </div>
+  </div>
+  <div class="ejemplo-detalle">
+    <div class="card-detalle">
+      <h2>Modal detalles</h2>
+      <p>Modal emergente que muestra información detallada de un registro seleccionado en la tabla. Útil para consultar
+        o editar datos sin salir de la vista principal.</p>
+      <div class="preview">
+
+        <div class="modal-content">
+          <div class="modal-header">
+            <h2 class="modal-title">Titulo</h2>
+            <button class="close-button">
+              <mat-icon class="close-icon">close</mat-icon>
+            </button>
+          </div>
+          <div class="modal-body">
+            <div class="info-container">
+              <div class="info-columns">
+                <div class="info-column">
+                  <div class="info-row">
+                    <div class="info-label">Info 1</div>
+                    <div class="info-value">-</div>
+                  </div>
+                  <div class="info-row">
+                    <div class="info-label">Info 1</div>
+                    <div class="info-value">-</div>
+                  </div>
+                  <div class="info-row">
+                    <div class="info-label">Info 1</div>
+                    <div class="info-value">-</div>
+                  </div>
+                  <div class="info-row">
+                    <div class="info-label">Info 1</div>
+                    <div class="info-value">-</div>
+                  </div>
+                </div>
+                <div class="info-column">
+                  <div class="info-row">
+                    <div class="info-label">Info 1</div>
+                    <div class="info-value">-</div>
+                  </div>
+                  <div class="info-row">
+                    <div class="info-label">Info 1</div>
+                    <div class="info-value">-</div>
+                  </div>
+                  <div class="info-row">
+                    <div class="info-label">Info 1</div>
+                    <div class="info-value">-</div>
+                  </div>
+                  <div class="info-row">
+                    <div class="info-label">Info 1</div>
+                    <div class="info-value">-</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <button class="btn-primary ver-codigo" (click)="verCodigoDetalle()">Ver código</button>
+    </div>
+  </div>
+</div>

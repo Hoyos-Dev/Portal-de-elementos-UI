@@ -1,0 +1,29 @@
+<div class="ui-general-container">
+  <h1 class="titulo-todos">Input</h1>
+  <p class="descripcion-todos">
+    Campo de texto estándar para capturar información básica del usuario.
+  </p>
+  <div class="volver-container">
+    <span class="volver-text" (click)="volver()">
+      <mat-icon class="flecha-atras">arrow_back</mat-icon>
+      Volver
+    </span>
+  </div>
+  <div class="card-input">
+    <div class="preview">
+      <mat-form-field class="vista-input" appearance="outline" style="width: 50%;">
+        <mat-label>Nombre</mat-label>
+        <input matInput placeholder="Escribe tu nombre">
+      </mat-form-field>
+    </div>
+  </div>
+
+  <div class="separador-codigo"></div>
+
+  <ng-container *ngIf="tabs.length > 0; else loading">
+    <app-view-sintaxis [tabs]="tabs"></app-view-sintaxis>
+  </ng-container>
+  <ng-template #loading>
+    <app-loader-shared></app-loader-shared>
+  </ng-template>
+</div>

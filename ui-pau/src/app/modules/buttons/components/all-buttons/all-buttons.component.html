@@ -1,0 +1,94 @@
+<app-header-categories *ngIf="mostrarHeader" [titulo]="'Botones'"
+  [descripcion]="'Colección de botones disponibles para la interfaz PAU. Incluye botones primarios, secundarios, deshabilitados, con iconos y otros elementos interactivos diseñados para proporcionar una experiencia de usuario consistente.'"></app-header-categories>
+<div class="ui-general-container">
+  <div class="ejemplo-boton">
+    <div class="card-boton">
+      <h2>Botón primario</h2>
+      <p>Botón principal para acciones destacadas en la interfaz</p>
+      <div class="preview">
+        <button class="btn-primary">BOTON</button>
+      </div>
+      <button class="btn-primary ver-codigo" (click)="verCodigoPrimario()">Ver código</button>
+    </div>
+    <div class="card-boton">
+      <h2>Botón secundario</h2>
+      <p>Botón alternativo para acciones complementarias dentro del portal</p>
+      <div class="preview">
+        <button class="btn-outline">BOTON</button>
+      </div>
+      <button class="btn-primary ver-codigo" (click)="verCodigoSecundario()">Ver código</button>
+    </div>
+    <div class="card-boton">
+      <h2>Botón desactivado</h2>
+      <p>Botón en estado inactivo para acciones no disponibles</p>
+      <div class="preview">
+        <button class="btn-primary" disabled>BOTON</button>
+      </div>
+      <button class="btn-primary ver-codigo" (click)="verCodigoDesactivado()">Ver código</button>
+    </div>
+  </div>
+
+  <div class="ejemplo-boton-expandido">
+    <div class="card-boton-expandido">
+      <h2>Botones expandidos</h2>
+      <p>Botones con texto e iconos para acciones específicas</p>
+      <div class="preview">
+        <button class="Btn">
+          <span class="btn-text">Mover</span>
+          <span class="icon-svg">
+            <svg xmlns="http://www.w3.org/2000/svg" enable-background="new 0 0 24 24" height="24px" viewBox="0 0 24 24"
+              width="24px" fill="#e3e3e3">
+              <g>
+                <rect fill="none" height="24" width="24" />
+              </g>
+              <g>
+                <g />
+                <path
+                  d="M11.99,2C6.47,2,2,6.48,2,12c0,5.52,4.47,10,9.99,10C17.52,22,22,17.52,22,12C22,6.48,17.52,2,11.99,2z M8.5,8 C9.33,8,10,8.67,10,9.5S9.33,11,8.5,11S7,10.33,7,9.5S7.67,8,8.5,8z M12,18c-2.28,0-4.22-1.66-5-4h10C16.22,16.34,14.28,18,12,18z M15.5,11c-0.83,0-1.5-0.67-1.5-1.5S14.67,8,15.5,8S17,8.67,17,9.5S16.33,11,15.5,11z" />
+              </g>
+            </svg>
+          </span>
+        </button>
+        <button class="Btn">
+          <span class="btn-text">Asignar</span>
+          <span class="icon-svg">
+            <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px" fill="#e3e3e3">
+              <path d="M0 0h24v24H0z" fill="none" />
+              <path d="M16 17.01V10h-2v7.01h-3L15 21l4-3.99h-3zM9 3L5 6.99h3V14h2V6.99h3L9 3z" />
+            </svg>
+          </span>
+        </button>
+        <button class="Btn">
+          <span class="btn-text">Editar</span>
+          <span class="icon-svg">
+            <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px" fill="#e3e3e3">
+              <path d="M0 0h24v24H0z" fill="none" />
+              <path
+                d="M3 17.25V21h3.75l11.06-11.06-3.75-3.75L3 17.25zM20.71 7.04a1.003 1.003 0 0 0 0-1.42l-2.34-2.34a1.003 1.003 0 0 0-1.42 0l-1.83 1.83 3.75 3.75 1.84-1.82z" />
+            </svg>
+          </span>
+        </button>
+      </div>
+      <button class="btn-primary ver-codigo" (click)="verCodigoExpandido()">Ver código</button>
+    </div>
+    <div class="card-boton">
+      <h2>Botón + Icono</h2>
+      <p>Botón mas Icono interactivo para acciones rápidas</p>
+      <div class="preview">
+        <mat-icon class="btn-icon-blue">logout</mat-icon>
+      </div>
+      <button class="btn-primary ver-codigo" (click)="verCodigoBotonMasIcono()">Ver código</button>
+    </div>
+    <div class="card-boton">
+      <h2>Radio button</h2>
+      <p>Selector para elegir una opción entre varias alternativas</p>
+      <div class="preview">
+        <mat-radio-group [(ngModel)]="radioValue">
+          <mat-radio-button value="opcion1" color="primary">Opción 1</mat-radio-button>
+          <mat-radio-button value="opcion2" color="primary">Opción 2</mat-radio-button>
+        </mat-radio-group>
+      </div>
+      <button class="btn-primary ver-codigo" (click)="verCodigoRadioButton()">Ver código</button>
+    </div>
+  </div>
+</div>

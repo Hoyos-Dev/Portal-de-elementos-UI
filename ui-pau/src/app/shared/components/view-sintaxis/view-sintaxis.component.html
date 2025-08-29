@@ -1,0 +1,18 @@
+<div class="tabs-codigo">
+  <button *ngFor="let tab of tabs; let i = index" [ngClass]="{ 'tab-activo': selectedTabIndex === i }"
+    (click)="setTab(i)">
+    {{ tab.label }}
+    <span class="icono-tab" *ngIf="tab.safeIcon" [innerHTML]="tab.safeIcon"></span>
+  </button>
+</div>
+<div class="separador-codigo"></div>
+<div class="bloque-codigo">
+  <ng-container *ngFor="let tab of tabs; let i = index">
+    <ng-container *ngIf="selectedTabIndex === i">
+      <pre><code #codeBlock [ngClass]="'language-' + tab.language">{{ tab.code }}</code></pre>
+    </ng-container>
+  </ng-container>
+  <button class="btn-copiar" (click)="copiarCodigo()">
+    <mat-icon>content_copy</mat-icon>
+  </button>
+</div>

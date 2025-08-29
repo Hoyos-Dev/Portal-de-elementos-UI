@@ -1,0 +1,30 @@
+<app-header-categories *ngIf="mostrarHeader" [titulo]="'Colores'"
+  [descripcion]="'Estos colores están diseñados para mantener la identidad visual y accesibilidad de la plataforma.'"></app-header-categories>
+<div class="ui-general-container">
+  <div class="ejemplo-color">
+    <div class="card-color" *ngFor="let color of colors">
+      <h2>{{ color.name }}</h2>
+      <p>{{ color.hex }}</p>
+      <div class="preview">
+        <div [ngClass]="{
+              'cuadro-azul-primario': color.name === 'Azul primario',
+              'cuadro-azul-secundario': color.name === 'Azul hover',
+              'cuadro-azul-claro': color.name === 'Azul claro',
+              'cuadro-amarillo': color.name === 'Amarillo',
+              'cuadro-amarillo-claro': color.name === 'Amarillo claro',
+              'cuadro-gris-op1': color.name === 'Gris Opcion 1',
+              'cuadro-gris-op2': color.name === 'Gris Opcion 2',
+              'cuadro-gris-op3': color.name === 'Gris Opcion 3',
+              'cuadro-negro': color.name === 'Negro',
+              'cuadro-verde': color.name === 'Verde',
+              'cuadro-verde-claro': color.name === 'Verde claro',
+              'cuadro-rojo': color.name === 'Rojo',
+              'cuadro-rojo-claro': color.name === 'Rojo claro',
+              'cuadro-naranja': color.name === 'Naranja',
+              'cuadro-naranja-claro': color.name === 'Naranja claro'
+            }"></div>
+      </div>
+      <button class="btn-primary ver-codigo" (click)="copiarHex(color.hex)">Copiar HEX</button>
+    </div>
+  </div>
+</div>

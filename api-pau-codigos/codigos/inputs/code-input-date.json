@@ -1,0 +1,7 @@
+{
+  "component": "code-input-date",
+  "html": "<mat-form-field class=\"vista-input\" appearance=\"outline\" style=\"width: 50%;\">\n  <mat-label>Fecha</mat-label>\n  <input matInput [matDatepicker]=\"picker\" />\n  <mat-datepicker-toggle matSuffix [for]=\"picker\"></mat-datepicker-toggle>\n  <mat-datepicker #picker></mat-datepicker>\n</mat-form-field>",
+  "icons": {
+    "html": "<svg viewBox=\"0 0 128 128\"><path fill=\"#E44D26\" d=\"M19.5 114.7L8.1 0h111.8l-11.4 114.6L63.9 128\"/><path fill=\"#F16529\" d=\"M64 117.1l36.8-10.2 9.8-109.7H64\"/><path fill=\"#EBEBEB\" d=\"M64 66.5H44.2l-1.4-15.7H64V36.1H28.7l.4 4.5 4.1 46.2H64v-20.3zm0 36.7l-.1.1-16.6-4.5-1.1-12.2H36.1l2.1 23.2 25.7 7 .1-.1v-13.5z\"/><path fill=\"#FFF\" d=\"M63.9 66.5V80.8h16.6l-1.6 17.9-15 4.1v13.5l25.7-7 .2-2.1 2.2-24.7.2-2.5H63.9zm0-30.4v14.7h18.2l1.2-13.2.1-1.5z\"/></svg>"
+  }
+} 

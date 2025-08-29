@@ -1,0 +1,27 @@
+<div class="ui-general-container">
+  <h1 class="titulo-todos">Tabs</h1>
+  <p class="descripcion-todos">
+    Navegación por pestañas para organizar contenido en secciones fácilmente accesibles.
+  </p>
+  <div class="volver-container">
+    <span class="volver-text" (click)="volver()">
+      <mat-icon class="flecha-atras">arrow_back</mat-icon>
+      Volver
+    </span>
+  </div>
+  <div class="card-tabs">
+    <div class="preview">
+      <mat-tab-group class="tab-ancho" animationDuration="0ms">
+        <mat-tab label="First">Vista 1</mat-tab>
+        <mat-tab label="Second">Vista 2</mat-tab>
+        <mat-tab label="Third">Vista 3</mat-tab>
+      </mat-tab-group>
+    </div>
+  </div>
+  <ng-container *ngIf="tabs.length; else loading">
+    <app-view-sintaxis [tabs]="tabs"></app-view-sintaxis>
+  </ng-container>
+  <ng-template #loading>
+    <app-loader-shared></app-loader-shared>
+  </ng-template>
+</div>

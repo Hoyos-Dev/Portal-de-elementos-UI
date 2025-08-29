@@ -1,0 +1,30 @@
+<div class="ui-general-container">
+  <h1 class="titulo-todos">Header</h1>
+  <p class="descripcion-todos">
+    Encabezado adaptable para secciones o modulos.
+  </p>
+  <div class="volver-container">
+    <span class="volver-text" (click)="volver()">
+      <mat-icon class="flecha-atras">arrow_back</mat-icon>
+      Volver
+    </span>
+  </div>
+  <div class="card-header">
+    <div class="preview">
+      <header class="head-ui-container">
+        <div class="header-content">
+          <h1>Titulo</h1>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis aliquet ornare est, a elementum lacus
+            sagittis eget.</p>
+        </div>
+        <hr class="hr-style">
+      </header>
+    </div>
+  </div>
+  <ng-container *ngIf="tabs.length; else loading">
+    <app-view-sintaxis [tabs]="tabs"></app-view-sintaxis>
+  </ng-container>
+  <ng-template #loading>
+    <app-loader-shared></app-loader-shared>
+  </ng-template>
+</div>

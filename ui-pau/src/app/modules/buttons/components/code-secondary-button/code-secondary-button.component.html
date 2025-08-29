@@ -1,0 +1,23 @@
+<div class="ui-general-container">
+  <h1 class="titulo-todos">Botón secundario</h1>
+  <p class="descripcion-todos">
+    Botón alternativo para acciones complementarias dentro del portal
+  </p>
+  <div class="volver-container">
+    <span class="volver-text" (click)="volver()">
+      <mat-icon class="flecha-atras">arrow_back</mat-icon>
+      Volver
+    </span>
+  </div>
+  <div class="card-boton">
+    <div class="preview">
+      <button class="btn-outline">BOTON</button>
+    </div>
+  </div>
+  <ng-container *ngIf="tabs.length > 0; else loading">
+    <app-view-sintaxis [tabs]="tabs"></app-view-sintaxis>
+  </ng-container>
+  <ng-template #loading>
+    <app-loader-shared></app-loader-shared>
+  </ng-template>
+</div>

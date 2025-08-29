@@ -1,0 +1,31 @@
+<div class="ui-general-container">
+  <h1 class="titulo-todos">Tarjeta detalles</h1>
+  <p class="descripcion-todos">
+    Tarjeta informativa que destaca detalles clave de un elemento o registro. Útil para resúmenes y vistas rápidas.
+  </p>
+  <div class="volver-container">
+    <span class="volver-text" (click)="volver()">
+      <mat-icon class="flecha-atras">arrow_back</mat-icon>
+      Volver
+    </span>
+  </div>
+  <div class="card-card">
+    <div class="preview">
+      <div class="steps-container">
+        <div class="step">
+          <h3>Titulo</h3>
+          <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Veniam, enim? Ullam voluptas placeat magni
+            voluptatum?
+            Cum corporis corrupti, labore obcaecati et ullam porro nesciunt omnis dolores quos.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <ng-container *ngIf="tabs.length > 0; else loading">
+    <app-view-sintaxis [tabs]="tabs"></app-view-sintaxis>
+  </ng-container>
+  <ng-template #loading>
+    <app-loader-shared></app-loader-shared>
+  </ng-template>
+</div>

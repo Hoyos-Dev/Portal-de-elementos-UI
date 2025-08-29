@@ -1,0 +1,29 @@
+// Orchestrator - Solo lógica y estructura, sin estilos
+// Los estilos deben estar en los componentes individuales
+
+.orchestrator-container {
+  display: flex;
+  gap: 24px;
+  align-items: flex-start;
+  margin-left: 100px; // Separación del borde izquierdo
+}
+
+.side-panel {
+  width: 400px;
+  min-width: 350px;
+  max-width: 400px;
+  position: sticky;
+  top: 40px; // Ajusta según el header
+  align-self: flex-start;
+  height: fit-content;
+  z-index: 2;
+  margin-bottom: 28px;
+}
+
+.main-panel {
+  flex: 1;
+  min-height: 400px;
+  max-width: 18000px;
+  margin-right: 100px;
+  margin-bottom: 28px;
+}

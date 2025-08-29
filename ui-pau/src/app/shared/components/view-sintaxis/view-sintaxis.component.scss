@@ -1,0 +1,105 @@
+.tabs-codigo {
+  display: flex;
+  background: #212121;
+  border-radius: 6px 6px 0px 0px;
+  margin-top: 15px;
+  padding: 8px 8px;
+  font-family: 'Poppins', sans-serif;
+  display: flex;
+  gap: 12px;
+  width: 1275px;
+
+  button {
+    background-color: transparent;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    padding: 12px 18px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 15px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+    font-weight: 500;
+    &:hover {
+      background-color: #181818;
+    }
+    &:disabled {
+      background-color: #cccccc;
+      cursor: not-allowed;
+      &:hover {
+        background-color: #cccccc;
+      }
+    }
+  }
+  .tab-activo {
+    background-color: #171717 !important;
+    color: white;
+  }
+  .icono-tab {
+    display: inline-flex;
+    align-items: center;
+    vertical-align: middle;
+  }
+}
+
+.bloque-codigo {
+  position: relative;
+  display: flex;
+  align-items: center;
+  background: #171717;
+  color: #fff;
+  border-radius: 0 0 6px 6px;
+  margin-bottom: 28px;
+  margin-top: 0;
+  padding: 18px 24px;
+  font-size: 15px;
+  min-height: 60px;
+  box-shadow: 0 1.1px 2.2px rgba(0,0,0,0.05);
+  overflow-x: auto;
+  width: 1243px;
+
+  pre {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    font-family: 'Fira Mono', 'Consolas', 'Menlo', monospace;
+    font-size: 15px;
+    background: none;
+    color: #fff;
+    display: block;
+    line-height: 1.5;
+  }
+  code {
+    background: transparent;
+    color: inherit;
+    font-family: inherit;
+    font-size: inherit;
+  }
+  .btn-copiar {
+    position: absolute;
+    top: 16px;
+    right: 24px;
+    z-index: 2;
+    background: #00349400 !important;
+    color: #fff !important;
+    border-radius: 6px;
+    width: 45px;
+    height: 45px;
+    min-width: 45px;
+    min-height: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: none;
+    border: none;
+    transition: background 0.2s;
+  
+    &:hover {
+      background: #212121 !important;
+    }
+
+    mat-icon {
+      font-size: 23px
+    }
+  }
+} 

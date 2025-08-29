@@ -1,0 +1,23 @@
+<div class="ui-general-container">
+  <h1 class="titulo-todos">Botón desactivado</h1>
+  <p class="descripcion-todos">
+    Botón en estado inactivo para acciones no disponibles.
+  </p>
+  <div class="volver-container">
+    <span class="volver-text" (click)="volver()">
+      <mat-icon class="flecha-atras">arrow_back</mat-icon>
+      Volver
+    </span>
+  </div>
+  <div class="card-boton">
+    <div class="preview">
+      <button class="btn-primary" disabled>BOTON</button>
+    </div>
+  </div>
+  <ng-container *ngIf="tabs.length > 0; else loading">
+    <app-view-sintaxis [tabs]="tabs"></app-view-sintaxis>
+  </ng-container>
+  <ng-template #loading>
+    <app-loader-shared></app-loader-shared>
+  </ng-template>
+</div>

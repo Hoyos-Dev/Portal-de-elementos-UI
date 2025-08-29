@@ -1,0 +1,30 @@
+<div class="ui-general-container">
+  <h1 class="titulo-todos">Animación de carga</h1>
+  <p class="descripcion-todos">
+    Indicador visual animado que muestra que una acción o proceso está en progreso.
+  </p>
+  <div class="volver-container">
+    <span class="volver-text" (click)="volver()">
+      <mat-icon class="flecha-atras">arrow_back</mat-icon>
+      Volver
+    </span>
+  </div>
+  <div class="card-loader">
+    <div class="preview">
+      <div class="loader-overlay" [class.hidden]="isHidden">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 384" class="loader">
+          <circle r="176" cy="192" cx="192" stroke-width="40" fill="transparent" pathLength="360" class="active">
+          </circle>
+          <circle r="176" cy="192" cx="192" stroke-width="40" fill="transparent" pathLength="360" class="track">
+          </circle>
+        </svg>
+      </div>
+    </div>
+  </div>
+  <ng-container *ngIf="tabs.length > 0; else loading">
+    <app-view-sintaxis [tabs]="tabs"></app-view-sintaxis>
+  </ng-container>
+  <ng-template #loading>
+    <app-loader-shared></app-loader-shared>
+  </ng-template>
+</div>

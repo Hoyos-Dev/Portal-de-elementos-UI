@@ -1,0 +1,37 @@
+<div class="ui-general-container">
+    <h1 class="titulo-todos">Alerta "Error"</h1>
+    <p class="descripcion-todos">
+      Señala que ocurrió un problema o fallo.
+    </p>
+    <div class="volver-container">
+      <span class="volver-text" (click)="volver()">
+        <mat-icon class="flecha-atras">arrow_back</mat-icon>
+        Volver
+      </span>
+    </div>
+    <div class="card-alert">
+        <div class="preview">
+          <div class="custom-modal">
+            <button class="close-modal" aria-label="Cerrar">&times;</button>
+            <div class="modal-icon-wrapper">
+              <div class="modal-icon-bg error-bg">
+                <mat-icon class="modal-icon error-icon">error_outline</mat-icon>
+              </div>
+            </div>
+            <h2 class="modal-title">
+              ¡Ha ocurrido un error!
+            </h2>
+            <p class="modal-message">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum  egestas non justo at scelerisque. Vestibulum ante ipsum primis in faucibus orci.
+            </p>
+            <button class="btn-error">Confirmar</button>
+          </div>
+        </div>
+    </div>
+    <ng-container *ngIf="tabs.length > 0; else loading">
+      <app-view-sintaxis [tabs]="tabs"></app-view-sintaxis>
+    </ng-container>
+    <ng-template #loading>
+      <app-loader-shared></app-loader-shared>
+    </ng-template>
+</div>

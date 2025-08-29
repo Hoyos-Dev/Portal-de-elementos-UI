@@ -1,0 +1,46 @@
+<div class="ui-general-container">
+  <h1 class="titulo-todos">Tabla</h1>
+  <p class="descripcion-todos">
+    Ejemplo de tabla responsiva con filas, columnas y acciones. Ideal para visualizar grandes volúmenes de información
+    de manera estructurada.
+  </p>
+  <div class="volver-container">
+    <span class="volver-text" (click)="volver()">
+      <mat-icon class="flecha-atras">arrow_back</mat-icon>
+      Volver
+    </span>
+  </div>
+  <div class="card-tabla">
+    <div class="preview">
+      <div class="tabla-ejemplo-wrapper">
+        <table mat-table [dataSource]="dataSource" class="custom-mat-table">
+          <!-- Nombre Column -->
+          <ng-container matColumnDef="nombre">
+            <th mat-header-cell *matHeaderCellDef> Nombre </th>
+            <td mat-cell *matCellDef="let element"> {{element.nombre}} </td>
+          </ng-container>
+          <!-- Descripcion Column -->
+          <ng-container matColumnDef="descripcion">
+            <th mat-header-cell *matHeaderCellDef> Descripcion </th>
+            <td mat-cell *matCellDef="let element"> {{element.descripcion}} </td>
+          </ng-container>
+          <!-- Estado Column -->
+          <ng-container matColumnDef="estado">
+            <th mat-header-cell *matHeaderCellDef> Estado </th>
+            <td mat-cell *matCellDef="let element"> {{element.estado}} </td>
+          </ng-container>
+          <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+          <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+        </table>
+        <mat-paginator [length]="20" [pageSize]="5" [pageSizeOptions]="[5]" showFirstLastButtons></mat-paginator>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="separador-codigo"></div>
+<ng-container *ngIf="tabs.length > 0; else loading">
+  <app-view-sintaxis [tabs]="tabs"></app-view-sintaxis>
+</ng-container>
+<ng-template #loading>
+  <app-loader-shared></app-loader-shared>
+</ng-template>

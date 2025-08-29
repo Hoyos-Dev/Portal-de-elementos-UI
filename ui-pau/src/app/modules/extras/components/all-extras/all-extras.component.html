@@ -1,0 +1,50 @@
+<app-header-categories *ngIf="mostrarHeader" [titulo]="'Extras'"
+  [descripcion]="'Componentes adicionales para enriquecer la experiencia de usuario, como headers personalizados, tooltips y tabs interactivos.'"></app-header-categories>
+<div class="ui-general-container">
+  <div class="ejemplo-header">
+    <div class="card-header">
+      <h2>Header</h2>
+      <p>Encabezado adaptable para secciones o modulos.</p>
+      <div class="preview">
+        <header class="head-ui-container">
+          <div class="header-content">
+            <h1>Titulo</h1>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis aliquet ornare est, a elementum lacus
+              sagittis eget.</p>
+          </div>
+          <hr class="hr-style">
+        </header>
+      </div>
+      <button class="btn-primary ver-codigo" (click)="verCodigoHeader()">Ver código</button>
+    </div>
+    <div class="card-tooltips">
+      <h2>Tooltips</h2>
+      <p>Mensajes emergentes que brindan información contextual al usuario.</p>
+      <div class="preview">
+        <div class="custom-notification">
+          <div class="custom-notification__icon">
+            <mat-icon>info_outline</mat-icon>
+          </div>
+          <div class="custom-notification__text">
+            <p class="descripcion-todos">
+              Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+            </p>
+          </div>
+        </div>
+      </div>
+      <button class="btn-primary ver-codigo" (click)="verCodigoTooltips()">Ver código</button>
+    </div>
+    <div class="card-tabs">
+      <h2>Tabs</h2>
+      <p>Navegación por pestañas para organizar contenido en secciones fácilmente accesibles.</p>
+      <div class="preview">
+        <mat-tab-group class="tab-ancho" animationDuration="0ms">
+          <mat-tab label="First">Vista 1</mat-tab>
+          <mat-tab label="Second">Vista 2</mat-tab>
+          <mat-tab label="Third">Vista 3</mat-tab>
+        </mat-tab-group>
+      </div>
+      <button class="btn-primary ver-codigo" (click)="verCodigoTabs()">Ver código</button>
+    </div>
+  </div>
+</div>

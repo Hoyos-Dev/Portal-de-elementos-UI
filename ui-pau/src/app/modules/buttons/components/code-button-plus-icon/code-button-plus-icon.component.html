@@ -1,0 +1,25 @@
+<div class="ui-general-container">
+  <h1 class="titulo-todos">Botón + Icono</h1>
+  <p class="descripcion-todos">
+    Botón mas Icono interactivo para acciones rápidas.
+  </p>
+  <div class="volver-container">
+    <span class="volver-text" (click)="volver()">
+      <mat-icon class="flecha-atras">arrow_back</mat-icon>
+      Volver
+    </span>
+  </div>
+  <div class="ejemplo-boton-expandido">
+    <div class="card-boton">
+      <div class="preview">
+        <mat-icon class="btn-icon-blue">logout</mat-icon>
+      </div>
+    </div>
+  </div>
+  <ng-container *ngIf="tabs.length > 0; else loading">
+    <app-view-sintaxis [tabs]="tabs"></app-view-sintaxis>
+  </ng-container>
+  <ng-template #loading>
+    <app-loader-shared></app-loader-shared>
+  </ng-template>
+</div>

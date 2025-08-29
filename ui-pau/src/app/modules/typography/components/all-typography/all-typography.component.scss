@@ -1,0 +1,99 @@
+.ui-general-container {
+  padding-top: 0;
+}
+
+.titulo-todos {
+  margin-top: 0;
+  font-size: 25px;
+  font-weight: 700;
+  margin-bottom: 0;
+  font-family: 'Poppins', sans-serif;
+}
+
+.descripcion-todos {
+  color: #4a5568;
+  font-size: 15px;
+  font-weight: 300;
+  margin-top: 0;
+  margin-bottom: 27px;
+  font-family: 'Poppins', sans-serif;
+}
+
+.ejemplo-typography {
+  gap: 24px;
+  margin-top: 25px;
+  flex-wrap: wrap;
+}
+
+.ejemplo-typography {
+  margin-top: 30px;
+  h1, h2, h3, p, .caption {
+    font-family: 'Poppins', sans-serif;
+    margin-bottom: 16px;
+  }
+  h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+  }
+  h2 {
+    font-size: 2rem;
+    font-weight: 600;
+  }
+  h3 {
+    font-size: 1.5rem;
+    font-weight: 500;
+  }
+  p {
+    font-size: 1rem;
+    font-weight: 400;
+  }
+  .caption {
+    font-size: 0.85rem;
+    color: #64748b;
+    font-weight: 300;
+  }
+}
+
+.typography-card {
+  background: #ffffff;
+  border: 1.1px solid #e2e8f0;
+  border-radius: 10px;
+  padding: 28px 24px 18px 24px;
+  margin-bottom: 22px;
+  box-shadow: none;
+}
+
+.typography-card h1,
+.typography-card h2,
+.typography-card h3,
+.typography-card h4 {
+  font-family: 'Poppins', sans-serif;
+  margin: 0 0 8px 0;
+}
+
+.typography-card h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+}
+.typography-card h2 {
+  font-size: 2rem;
+  font-weight: 600;
+}
+.typography-card h3 {
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+.typography-card h4 {
+  font-size: 1.25rem;
+  font-weight: 500;
+}
+
+.typography-desc {
+  font-size: 0.9rem;
+  color: #64748b;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 400;
+  letter-spacing: 0.04em;
+  margin-top: 8px;
+  user-select: all;
+} 

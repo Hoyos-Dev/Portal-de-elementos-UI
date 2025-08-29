@@ -1,0 +1,32 @@
+<div class="ui-general-container">
+  <h1 class="titulo-todos">Tooltips</h1>
+  <p class="descripcion-todos">
+    Mensajes emergentes que brindan información contextual al usuario.
+  </p>
+  <div class="volver-container">
+    <span class="volver-text" (click)="volver()">
+      <mat-icon class="flecha-atras">arrow_back</mat-icon>
+      Volver
+    </span>
+  </div>
+  <div class="card-tooltips">
+    <div class="preview">
+      <div class="custom-notification">
+        <div class="custom-notification__icon">
+          <mat-icon>info_outline</mat-icon>
+        </div>
+        <div class="custom-notification__text">
+          <p class="descripcion-todos">
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <ng-container *ngIf="tabs.length; else loading">
+    <app-view-sintaxis [tabs]="tabs"></app-view-sintaxis>
+  </ng-container>
+  <ng-template #loading>
+    <app-loader-shared></app-loader-shared>
+  </ng-template>
+</div>

@@ -1,0 +1,40 @@
+<app-header-categories *ngIf="mostrarHeader" [titulo]="'Tarjetas'"
+  [descripcion]="'Componentes de tarjeta para mostrar información agrupada de manera visual, atractiva y organizada. Ideales para resúmenes, perfiles o vistas previas.'"></app-header-categories>
+<div class="ui-general-container">
+  <div class="ejemplo-card">
+    <div class="card-card">
+      <h2>Tarjeta detalles</h2>
+      <p>Tarjeta informativa que destaca detalles clave de un elemento o registro. Útil para resúmenes y vistas rápidas.
+      </p>
+      <div class="preview">
+        <div class="steps-container">
+          <div class="step">
+            <h3>Titulo</h3>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Veniam, enim? Ullam voluptas placeat magni
+              voluptatum? Cum corporis corrupti, labore obcaecati et ullam porro nesciunt omnis dolores quos.</p>
+          </div>
+        </div>
+      </div>
+      <button class="btn-primary ver-codigo" (click)="verCodigoDetalles()">Ver código</button>
+    </div>
+    <div class="card-card">
+      <h2>Tarjeta + Imagen</h2>
+      <p>Descripción breve o información adicional relacionada con el contenido principal de la tarjeta.</p>
+      <div class="preview">
+        <div class="card-demo-visual">
+          <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=400&q=80"
+            alt="Ejemplo" class="card-demo-img">
+          <div class="card-demo-content">
+            <div class="card-demo-title">Titulo</div>
+            <div class="card-demo-sub">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Rem asperiores eligendi
+              possimus, harum voluptatem maiores nisi</div>
+            <button class="card-demo-btn">
+              Continuar <mat-icon class="icon-md">arrow_forward</mat-icon>
+            </button>
+          </div>
+        </div>
+      </div>
+      <button class="btn-primary ver-codigo" (click)="verCodigoDetalleImagen()">Ver código</button>
+    </div>
+  </div>
+</div>

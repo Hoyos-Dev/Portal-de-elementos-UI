@@ -1,0 +1,77 @@
+<div class="ui-general-container">
+  <h1 class="titulo-todos">Modal detalles</h1>
+  <p class="descripcion-todos">
+    Modal emergente que muestra información detallada de un registro seleccionado en la tabla. Útil para consultar o
+    editar datos sin salir de la vista principal.
+  </p>
+  <div class="volver-container">
+    <span class="volver-text" (click)="volver()">
+      <mat-icon class="flecha-atras">arrow_back</mat-icon>
+      Volver
+    </span>
+  </div>
+  <div class="ejemplo-detalle">
+    <div class="card-detalle">
+      <div class="preview">
+
+        <div class="modal-content">
+          <div class="modal-header">
+            <h2 class="modal-title">Titulo</h2>
+            <button class="close-button">
+              <mat-icon class="close-icon">close</mat-icon>
+            </button>
+          </div>
+          <div class="modal-body">
+            <div class="info-container">
+              <div class="info-columns">
+                <div class="info-column">
+                  <div class="info-row">
+                    <div class="info-label">Info 1</div>
+                    <div class="info-value">-</div>
+                  </div>
+                  <div class="info-row">
+                    <div class="info-label">Info 1</div>
+                    <div class="info-value">-</div>
+                  </div>
+                  <div class="info-row">
+                    <div class="info-label">Info 1</div>
+                    <div class="info-value">-</div>
+                  </div>
+                  <div class="info-row">
+                    <div class="info-label">Info 1</div>
+                    <div class="info-value">-</div>
+                  </div>
+                </div>
+                <div class="info-column">
+                  <div class="info-row">
+                    <div class="info-label">Info 1</div>
+                    <div class="info-value">-</div>
+                  </div>
+                  <div class="info-row">
+                    <div class="info-label">Info 1</div>
+                    <div class="info-value">-</div>
+                  </div>
+                  <div class="info-row">
+                    <div class="info-label">Info 1</div>
+                    <div class="info-value">-</div>
+                  </div>
+                  <div class="info-row">
+                    <div class="info-label">Info 1</div>
+                    <div class="info-value">-</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="separador-codigo"></div>
+<ng-container *ngIf="tabs.length > 0; else loading">
+  <app-view-sintaxis [tabs]="tabs"></app-view-sintaxis>
+</ng-container>
+<ng-template #loading>
+  <app-loader-shared></app-loader-shared>
+</ng-template>

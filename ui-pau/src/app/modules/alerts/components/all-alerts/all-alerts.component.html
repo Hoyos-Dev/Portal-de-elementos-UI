@@ -1,0 +1,93 @@
+<app-header-categories
+  *ngIf="mostrarHeader"
+  [titulo]="'Alertas'"
+  [descripcion]="'Componentes de alerta para comunicar mensajes de éxito, error, advertencia o información de manera clara y visual.'"
+></app-header-categories>
+<div class="ui-general-container">
+    <div class="ejemplo-alert">
+        <div class="card-alert">
+          <h2>Alerta "Correcto"</h2>
+          <p>Indica que una acción se realizó correctamente.</p>
+          <div class="preview">
+            <div class="custom-modal">
+              <button class="close-modal" aria-label="Cerrar">&times;</button>
+              <div class="modal-icon-wrapper">
+                <div class="modal-icon-bg">
+                  <mat-icon class="modal-icon">check</mat-icon>
+                </div>
+              </div>
+              <h2 class="modal-title">¡Todo salio bien!</h2>
+              <p class="modal-message">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum  egestas non justo at scelerisque. Vestibulum ante ipsum primis in faucibus orci.
+              </p>
+              <button class="btn-check">Confirmar</button>
+            </div>
+          </div>
+          <button class="btn-primary ver-codigo" (click)="verCodigoAlertaExitosa()">Ver código</button>
+        </div>
+  
+        <div class="card-alert">
+          <h2>Alerta "Error"</h2>
+          <p>Señala que ocurrió un problema o fallo.</p>
+          <div class="preview">
+            <div class="custom-modal">
+              <button class="close-modal" aria-label="Cerrar">&times;</button>
+              <div class="modal-icon-wrapper">
+                <div class="modal-icon-bg error-bg">
+                  <mat-icon class="modal-icon error-icon">error_outline</mat-icon>
+                </div>
+              </div>
+              <h2 class="modal-title">¡Ha ocurrido un error!</h2>
+              <p class="modal-message">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum  egestas non justo at scelerisque. Vestibulum ante ipsum primis in faucibus orci.
+              </p>
+              <button class="btn-error">Confirmar</button>
+            </div>
+          </div>
+          <button class="btn-primary ver-codigo" (click)="verCodigoAlertaError()">Ver código</button>
+        </div>
+      </div>
+      <div class="ejemplo-alert">
+        <div class="card-alert">
+          <h2>Alerta "Warning"</h2>
+          <p>Advierte sobre una situación que requiere atención, pero que no impide continuar.</p>
+          <div class="preview">
+            <div class="custom-modal">
+              <button class="close-modal" aria-label="Cerrar">&times;</button>
+              <div class="modal-icon-wrapper">
+                <div class="modal-icon-bg warning-bg">
+                  <mat-icon class="modal-icon warning-icon">warning</mat-icon>
+                </div>
+              </div>
+              <h2 class="modal-title">¡Peligro!</h2>
+              <p class="modal-message">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum  egestas non justo at scelerisque. Vestibulum ante ipsum primis in faucibus orci.
+              </p>
+              <button class="btn-warning">Confirmar</button>
+            </div>
+          </div>
+          <button class="btn-primary ver-codigo" (click)="verCodigoAlertaWarning()">Ver código</button>
+        </div>
+  
+        <div class="card-alert">
+          <h2>Alerta "info"</h2>
+          <p>Proporciona información relevante o contextual al usuario. Úsala para mensajes neutrales o aclaratorios.</p>
+          <div class="preview">
+            <div class="custom-modal">
+              <button class="close-modal" aria-label="Cerrar">&times;</button>
+              <div class="modal-icon-wrapper">
+                <div class="modal-icon-bg info-bg">
+                  <mat-icon class="modal-icon info-icon">info_outline</mat-icon>
+                </div>
+              </div>
+              <h2 class="modal-title">información</h2>
+              <p class="modal-message">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum  egestas non justo at scelerisque. Vestibulum ante ipsum primis in faucibus orci.
+              </p>
+              <button class="btn-info">Confirmar</button>
+            </div>
+          </div>
+          <button class="btn-primary ver-codigo" (click)="verCodigoAlertaInfo()">Ver código</button>
+        </div>
+      </div>    
+</div>  

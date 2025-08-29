@@ -1,0 +1,29 @@
+<div class="ui-general-container">
+  <h1 class="titulo-todos">Input fecha</h1>
+  <p class="descripcion-todos">
+    Selector de fecha con calendario desplegable para elegir días de forma intuitiva.
+  </p>
+  <div class="volver-container">
+    <span class="volver-text" (click)="volver()">
+      <mat-icon class="flecha-atras">arrow_back</mat-icon>
+      Volver
+    </span>
+  </div>
+  <div class="card-input">
+    <div class="preview">
+      <mat-form-field class="vista-input" appearance="outline" style="width: 50%;">
+        <mat-label>Fecha</mat-label>
+        <input matInput [matDatepicker]="picker">
+        <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+        <mat-datepicker #picker></mat-datepicker>
+      </mat-form-field>
+    </div>
+  </div>
+
+  <ng-container *ngIf="tabs.length > 0; else loading">
+    <app-view-sintaxis [tabs]="tabs"></app-view-sintaxis>
+  </ng-container>
+  <ng-template #loading>
+    <app-loader-shared></app-loader-shared>
+  </ng-template>
+</div>

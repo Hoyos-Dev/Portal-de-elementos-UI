@@ -1,0 +1,24 @@
+<app-header-categories *ngIf="mostrarHeader" [titulo]="'Iconos'"
+  [descripcion]="'Colección de iconos disponibles para su uso en la interfaz PAU. Estos iconos proporcionan elementos visuales consistentes para mejorar la experiencia del usuario y la navegabilidad de la aplicación.'"></app-header-categories>
+<div class="ui-general-container">
+  <div class="ejemplo-icons-loader">
+    <div class="card-icons">
+      <h2>Iconos</h2>
+      <p>Conjunto de iconos Material Design para uso en componentes interactivos.</p>
+      <div class="preview">
+        <div class="icons-group">
+          <mat-icon>search</mat-icon>
+          <mat-icon>add</mat-icon>
+          <mat-icon>check</mat-icon>
+          <mat-icon>close</mat-icon>
+          <mat-icon>error</mat-icon>
+          <mat-icon>warning</mat-icon>
+          <mat-icon>logout</mat-icon>
+          <mat-icon>refresh</mat-icon>
+          <mat-icon>arrow_forward_ios</mat-icon>
+        </div>
+      </div>
+      <button class="btn-primary ver-codigo" (click)="verCodigoIcons()">Ver código</button>
+    </div>
+  </div>
+</div>

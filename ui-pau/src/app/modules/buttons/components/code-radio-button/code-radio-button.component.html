@@ -1,0 +1,26 @@
+<div class="ui-general-container">
+  <h1 class="titulo-todos">Radio button</h1>
+  <p class="descripcion-todos">
+    Selector para elegir una opción entre varias alternativas.
+  </p>
+  <div class="volver-container">
+    <span class="volver-text" (click)="volver()">
+      <mat-icon class="flecha-atras">arrow_back</mat-icon>
+      Volver
+    </span>
+  </div>
+  <div class="card-boton">
+    <div class="preview">
+      <mat-radio-group [(ngModel)]="radioValue">
+        <mat-radio-button value="opcion1" color="primary">Opción 1</mat-radio-button>
+        <mat-radio-button value="opcion2" color="primary">Opción 2</mat-radio-button>
+      </mat-radio-group>
+    </div>
+  </div>
+  <ng-container *ngIf="tabs.length > 0; else loading">
+    <app-view-sintaxis [tabs]="tabs"></app-view-sintaxis>
+  </ng-container>
+  <ng-template #loading>
+    <app-loader-shared></app-loader-shared>
+  </ng-template>
+</div>
